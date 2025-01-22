@@ -1,3 +1,4 @@
+{% set python_min = '3.11.0' %}
 {% set name = "defectpl" %}
 {% set version = "0.1.2" %}
 
@@ -12,15 +13,15 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.11,<4.0
+    - python {{ python_min }}
     - poetry-core
     - pip
   run:
-    - python >=3.11.0,<4.0.0
+    - python >={{ python_min }},<4.0.0
     - pyyaml >=6.0.2,<7.0.0
     - numpy >=2.1.2,<3.0.0
     - pymatgen 2024.10.3
@@ -33,6 +34,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/Shibu778/defectpl
