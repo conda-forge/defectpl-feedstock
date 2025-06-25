@@ -25,6 +25,8 @@ requirements:
     - pyyaml >=6.0.2,<7.0.0
     - numpy >=2.1.2,<3.0.0
     - pymatgen 2024.10.3
+    - pdoc3 >=0.11.1
+    - click >=8.1.7
 
 test:
   imports:
