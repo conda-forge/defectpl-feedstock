@@ -1,6 +1,6 @@
 {% set python_min = "3.10.0" %}
 {% set name = "defectpl" %}
-{% set version = "0.1.5" %}
+{% set version = "0.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/defectpl-{{ version }}.tar.gz
-  sha256: db84eadc638e599fe8568b4dd1578a52ab1a654b571534f5b1e587f41dde0365
+  sha256: c4f2d6a037f6754f907761391fbab90af04e589c9e43b4899bc702289231cc73
 
 build:
   noarch: python
