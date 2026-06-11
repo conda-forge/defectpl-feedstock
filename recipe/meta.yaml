@@ -26,7 +26,7 @@ requirements:
     - pymatgen-core >=2026.5.18
     - pymatgen >=2026.5.4
     - click >=8.1.7
-    - phonopy >=2.35.0
+    - phonopy >=2.35.0,<3.0.0
     - matplotlib >=3.8.0
     - monty >=2026.5.18
 
