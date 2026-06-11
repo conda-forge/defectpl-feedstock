@@ -1,6 +1,5 @@
-{% set python_min = "3.10.0" %}
 {% set name = "defectpl" %}
-{% set version = "0.1.5" %}
+{% set version = "0.2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/defectpl-{{ version }}.tar.gz
-  sha256: db84eadc638e599fe8568b4dd1578a52ab1a654b571534f5b1e587f41dde0365
+  sha256: ab1c92bebbe334e31cc2172cd670bfaabb0e8338ad6951729e6e67f1c603b039
 
 build:
   noarch: python
@@ -17,16 +16,19 @@ build:
 
 requirements:
   host:
-    - python {{ python_min }}
-    - poetry-core
+    - python >=3.10
+    - poetry-core >=2.0.0
     - pip
   run:
-    - python >={{ python_min }},<4.0.0
-    - pyyaml >=6.0.2,<7.0.0
-    - numpy >=2.1.2,<3.0.0
-    - pymatgen 2024.10.3
-    - pdoc3 >=0.11.1
+    - python >=3.10
+    - pyyaml >=6.0.2
+    - numpy >=2.1.2
+    - pymatgen-core >=2026.5.18
+    - pymatgen >=2026.5.4
     - click >=8.1.7
+    - phonopy >=2.35.0
+    - matplotlib >=3.8.0
+    - monty >=2026.5.18
 
 test:
   imports:
@@ -35,7 +37,7 @@ test:
     - pip check
   requires:
     - pip
-    - python {{ python_min }}
+    - python >=3.10
 
 about:
   home: https://github.com/Shibu778/defectpl
